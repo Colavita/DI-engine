@@ -27,7 +27,7 @@ def load_dataset(name, index_name):
         https://github.com/AminHP/gym-anytrading/blob/master/gym_anytrading/datasets/data/STOCKS_GOOGL.csv"
 
     df = pd.read_csv(path, parse_dates=True, index_col=index_name)
-    return df
+    return df    
 
 
 class Actions(int, Enum):
