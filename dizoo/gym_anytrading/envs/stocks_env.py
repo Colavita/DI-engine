@@ -16,7 +16,7 @@ class StocksEnv(TradingEnv):
         super().__init__(cfg)
 
         # ====== load Google stocks data =======
-        raw_data = load_dataset(self._cfg.stocks_data_filename, 'Date')
+        raw_data = load_dataset(self._cfg.stocks_data_filename, 'Start')
         self.raw_prices = raw_data.loc[:, 'Close'].to_numpy()
         EPS = 1e-10
         self.df = deepcopy(raw_data)
